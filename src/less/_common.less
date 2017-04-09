@@ -4,3 +4,44 @@
   
   
 //btns
+
+
+//table
+.common-table-bgdn {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: #565656;
+  font-weight: 300;
+  
+  th,
+  td {
+    padding: 20px 18px;
+  }
+  
+  th {
+    border: 1px solid @color-blue;
+    background: @color-blue;
+    color: #fff;
+    font-size: 17px;
+    white-space: nowrap
+  }
+  
+  td {
+    border-bottom: 2px solid @color-blue;
+    border-right: 1px solid @color-blue;
+    font-size: 15px;
+    
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+
+//etc
+.common-bgdn {
+  &__emphasized {
+    color: @color-blue;
+  }
+}
