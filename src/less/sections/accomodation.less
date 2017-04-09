@@ -1,3 +1,49 @@
 // http://joxi.ru/xAeYNM9ujGBBAy
 
 @import '../_variables.less';
+
+.accomodation-bgdn {
+  &__photo {
+    height: 125px;
+  }
+  
+  &__body-container {
+    margin-top: 4px;
+    padding: 2px 5px 10px 5px;
+    font-size: 12px;
+    background: #f7f7f7;
+  }
+  
+  &__title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  &__text {
+    margin-bottom: 10px;
+    color: #8f8f8f;
+  }
+  
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__remove-btn {
+    margin: auto;
+    font-size: 29px;
+  }
+  
+  &__counter {
+    margin: auto;
+    color: @color-green;
+  }
+  
+}
