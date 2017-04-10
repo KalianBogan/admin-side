@@ -22,6 +22,36 @@
     color: #8f8f8f;
   }
   
+  &__calendar {
+    margin-right: 20px;
+  }
+  
+  &__clock-icon, &__calendar-icon {
+    margin-right: 3px;
+  }
+  
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    line-height: 20px;
+  }
+  
+  &__price {
+    color: @color-paid;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  &__live-item {
+    color: @color-purple;
+  }
+  
+  &__not-live-item {
+    color: @color-pink;
+  }
+  
   &__group {
     display: flex;
     justify-content: space-between;
@@ -35,7 +65,8 @@
   }
   
   &__remove-btn {
-    margin: auto;
+    margin: 0;
+    color: @color-pink;
     font-size: 29px;
   }
   
