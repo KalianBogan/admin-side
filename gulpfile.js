@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     watch = require('gulp-watch'),
     browserSync = require("browser-sync"),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    rename = require('gulp-rename');
     
 
 var config = {
@@ -36,6 +37,14 @@ var path = {
     js: 'src/js/**/*.js',
     style: 'src/less/**/*.less',
     img: 'src/img/**/*.*'
+  },
+  updatePlatform: {
+    src: {
+      style: 'build/css/main_style.css'
+    },
+    build: {
+      style: 'D:/web/2017/england/espoplatform/expoplatform-main/backend/admin/views/hospitality'
+    }
   }
 };
 
@@ -100,3 +109,10 @@ gulp.task('default', [
   'webserver',
   'watch'
 ]);
+
+gulp.task('style:update', function () {
+  gulp.src(path.updatePlatform.src.style)
+  .pipe(rename('admin-hosp.css'))
+  .pipe(gulp.dest(path.updatePlatform.build.style));
+});
+
