@@ -43,7 +43,7 @@ var path = {
       style: 'build/css/main_style.css'
     },
     build: {
-      style: 'D:/web/2017/england/espoplatform/expoplatform-main/backend/admin/views/hospitality'
+      style: 'D:/web/2017/england/espoplatform/expoplatform-main/backend/public/admin/css'
     }
   }
 };
@@ -110,9 +110,25 @@ gulp.task('default', [
   'watch'
 ]);
 
+
+
 gulp.task('style:update', function () {
   gulp.src(path.updatePlatform.src.style)
   .pipe(rename('admin-hosp.css'))
   .pipe(gulp.dest(path.updatePlatform.build.style));
 });
 
+gulp.task('build -u', [
+  'style:update'
+]);
+
+gulp.task('watch -u', function(){
+  watch([path.updatePlatform.src.style], function(event, cb) {
+      gulp.start('style:update');
+  });
+});
+
+gulp.task('update:platform', [
+  'build -u',
+  'watch -u'
+]);
