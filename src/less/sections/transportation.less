@@ -5,11 +5,14 @@
     margin: 0 -15px 30px;
   }
   
-  &__id {
+  &__id,
+  &__from,
+  &__to {
     font-weight: bold;
     
     a {
       color: #565656;
+      text-decoration: none;
       
       &:hover {
         color: @color-blue;
@@ -18,18 +21,11 @@
     }
   }
   
-  &__from {
-    color: #000;
-    font-weight: bold;
-  }
-  
-  &__to {
-    color: #000;
-    font-weight: bold;
-  }
-  
   &__date {
     color: #565656;
+    @media screen and (min-width: 1500px) {
+      white-space: nowrap;
+    }
   }
   
   &__date-item {
@@ -40,6 +36,10 @@
     &:last-child {
       margin-right: 0;
     }
+    
+    .fa {
+      margin-right: 4px;
+    }
   }
   
   &__type {
@@ -48,6 +48,7 @@
   
   &__cap {
     color: #565656;
+    white-space: nowrap;
   }
   
   &__status {
@@ -55,7 +56,7 @@
   }
   
   &__status-pic {
-    margin-right: 10px;
+    margin-right: 5px;
     
     &--live {
       color: @color-purple;
@@ -101,6 +102,7 @@
 
     &__status {
       width: 10%;
+      white-space: nowrap;
     }
   }
   
@@ -114,10 +116,6 @@
 
     &__date {
       width: 150px
-    }
-    
-    &__cap {
-      white-space: nowrap;
     }
     
     &__tot {
